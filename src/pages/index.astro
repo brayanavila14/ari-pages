@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+// import Features from '../components/Features.astro'; (Cuando lo crees)
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Ari - Tu compañera virtual">
+  <main>
+    <Hero />
+
+    <section id="saber-mas" class="py-20 px-4 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">¿Por qué Ari?</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-slate-800 rounded-xl border border-slate-700">
+          <h3 class="text-xl font-bold mb-2 text-indigo-400">Empatía</h3>
+          <p class="text-slate-400">
+            Diseñada para entenderte y acompañarte, no solo para responder
+            comandos.
+          </p>
+        </div>
+
+        <div class="p-6 bg-slate-800 rounded-xl border border-slate-700">
+          <h3 class="text-xl font-bold mb-2 text-indigo-400">Disponibilidad</h3>
+          <p class="text-slate-400">
+            Siempre ahí cuando necesitas desahogarte o simplemente charlar.
+          </p>
+        </div>
+
+        <div class="p-6 bg-slate-800 rounded-xl border border-slate-700">
+          <h3 class="text-xl font-bold mb-2 text-indigo-400">Privacidad</h3>
+          <p class="text-slate-400">
+            Tus conversaciones son seguras y tratadas con la mayor
+            confidencialidad.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
