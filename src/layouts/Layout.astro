@@ -1,24 +1,48 @@
 ---
 import "../styles/global.css";
+
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "Soy Ari: Tu chatbot de inteligencia artificial empática. Habla conmigo sobre psicología, emociones y bienestar mental disponible 24/7.",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Conoce a Ari, tu asistente inteligente."
-    />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="Soy Ari, Ari Chatbot, IA Psicológica, Inteligencia Artificial Empática, Chatbot Bienestar, Asistente Virtual Ari"
+    />
+    <meta name="author" content="Braydev" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://soyari.site/og-image.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://soyari.site/og-image.jpg" />
   </head>
+
   <body class="bg-slate-900 text-white font-sans">
     <slot />
   </body>
