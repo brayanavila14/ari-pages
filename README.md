@@ -65,7 +65,7 @@ Si quieres correr este proyecto localmente:
 1.  **Clona el repositorio:**
 
     ```bash
-    git clone [https://github.com/brayanavila14/ari-pages.git](https://github.com/brayanavila14/ari-pages.git)
+    git clone https://github.com/brayanavila14/ari-pages.git
     ```
 
 2.  **Instala las dependencias:**
